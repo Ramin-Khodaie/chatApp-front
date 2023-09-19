@@ -1,0 +1,151 @@
+.container {
+  background-color: #e5ddd5;  
+  height: 100vh;  
+  transform: translateX(0%);  
+  min-width: 20%;
+  transition: all 0.3s ease-in-out;
+  .header {
+    background-color: var(--color-grey-base-primary);
+    width: 100%;
+    padding: 26px 8px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    svg {
+      color: var(--color-grey-tirnary);
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .imageContainer {
+    background-color: var(--color-base-white);
+    padding: 16px 32px;
+    display: flex;
+    justify-content: center;
+    height: 30%;
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  }
+  .media {
+    background-color: var(--color-base-white);
+    padding: 12px 4px;
+    height: 25%;
+    .text {
+      display: flex;
+      justify-content: space-between;
+      padding-inline: 8px;
+      align-items: center;
+      margin-bottom: 12px;
+      &:hover {
+        cursor: pointer;
+      }
+      p {
+        font-size: var(--font-size-lg);
+      }
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .content {
+      margin: 4px 0px;
+      padding-inline: 8px;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .about {
+    margin: 4px 0px;
+    background-color: var(--color-base-white);
+    padding: 12px 8px;
+    height: 6%;
+    p {
+      font-size: var(--font-size-lg);
+      opacity: 0.5;
+      margin-bottom: 4px;
+    }
+  }
+
+  .starredMessage {
+    margin: 4px 0px;
+    padding: 12px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-base-white);
+    height: 4%;
+    &:hover {
+      cursor: pointer;
+    }
+    p {
+      font-size: var(--font-size-lg);
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .notification {
+    background-color: var(--color-base-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 8px;
+    height: 19%;
+    .muteText {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 100px;
+      p {
+        font-size: var(--font-size-lg);
+      }
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .disappearedMessages {
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        p {
+          font-size: var(--font-size-lg);
+        }
+        span {
+          font-size: var(--font-size-md);
+          opacity: 0.5;
+        }
+      }
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 27px 8px;
+    background-color: var(--color-grey-base-primary);
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
+.visible{
+  transform: translateX(-100%);  
+  opacity: 1;
+  z-index: 2;
+}

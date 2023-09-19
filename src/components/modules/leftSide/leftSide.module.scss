@@ -1,0 +1,12 @@
+.container {
+  // flex: 0.3;
+  min-width: 28%;
+  .contactsContainer {
+    overflow: scroll;
+    overflow-x: hidden;
+    position: relative;
+    overflow-y: auto;
+    z-index: 1;
+    height: calc(100% - 137px);
+  }
+}

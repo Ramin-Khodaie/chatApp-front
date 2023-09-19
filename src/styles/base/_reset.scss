@@ -1,0 +1,47 @@
+:root {
+  --font-family: "Lato", tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);        
+    background-color: rgba($color: #000000, $alpha: 0.018);    
+    overflow-x: hidden;    
+}
+
+a{
+    color: currentColor;
+    text-decoration: none;
+}
+
+img{
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba($color: #fff, $alpha: 0.08);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($color: #000000, $alpha: 0.2);
+}

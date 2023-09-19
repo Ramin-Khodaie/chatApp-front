@@ -1,0 +1,105 @@
+.form {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+  p {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    color: var(--color-grey-tirnary);
+  }
+  .formControl {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    input {
+      width: 100%;
+      padding: 16px 12px !important;
+      border: none;
+      border-radius: 8px;
+      color: var(--color-text-color) !important;
+      font-size: var(--font-size-lg);
+      background: #fff !important;
+    }
+
+    label {
+      font-size: var(--font-size-md);
+      color: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    button {
+      background-color: var(--color-blue-primary);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: var(--font-size-2xl);
+      color: var(--color-icon-bg-color);
+      width: 50%;
+      margin: auto;
+      &:hover {
+        cursor: pointer;
+        background-color: var(--color-blue-secondary);
+      }
+    }
+    span {
+      color: red;
+      font-size: var(--font-size-md);
+    }
+  }
+
+  .signupLink {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    
+    
+    a {
+      color:var(--color-blue-secondary);
+      text-decoration: underline;
+      &:hover {
+        color: var(--color-grey-tirnary);
+      }
+    }
+  }
+  .googleBtn {
+    background-color: #4285f4;
+    border-radius: 8px;
+    box-shadow: 0 3px 4px 0 rgba($color: #000000, $alpha: 0.25);
+    height: 42px;
+    width: 50%;
+    margin: auto;
+    cursor: pointer;
+
+    .googleIcon {
+      position: absolute;
+      margin-top: 1px;
+      margin-left: 1px;
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 8px;
+      background-color: #fff;
+
+      .icon {
+        position: absolute;
+        margin-top: 11px;
+        margin-left: 11px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+    .googleText {
+      width: 100%;
+      color: #fff;
+      letter-spacing: 0.2px;
+      text-align: center;
+      padding-top: 11px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 6px #4285f4;
+    }
+  }
+}

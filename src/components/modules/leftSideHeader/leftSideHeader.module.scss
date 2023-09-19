@@ -1,0 +1,27 @@
+.container{
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 12px;
+    align-items: center;
+    .avatar{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;        
+    }
+
+    .icons{
+        display: flex;
+        flex: 0.7;
+        justify-content: flex-end;
+        gap: 36px;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        svg{
+            color: var(--color-grey-tirnary);
+        }
+    }
+}

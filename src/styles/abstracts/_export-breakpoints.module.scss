@@ -1,0 +1,7 @@
+@import "./breakpoints";
+
+:export {
+  @each $name, $value in $breakpoints {
+    #{name}: #{$value};
+  }
+}
