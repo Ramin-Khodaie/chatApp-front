@@ -1,0 +1,45 @@
+.container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #efefef;
+  padding: 20px 16px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  .input {
+    outline: none;
+    width: 90%;
+    padding: 12px 8px;
+    border-radius: 24px;
+  }
+
+  .icon {
+    color: var(--color-grey-tirnary);
+    &:hover {
+      cursor: pointer;
+      color: rgb(53, 24, 216);
+    }
+  }
+  .sendIcon {
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(53, 24, 216);
+    }
+  }
+  button {
+    background-color: black;
+    &:hover {
+      background-color: blue;
+    }
+  }
+}
+
+#btn {
+  border: 5px red solid;
+}
+

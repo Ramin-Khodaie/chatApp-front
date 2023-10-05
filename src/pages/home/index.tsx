@@ -1,14 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Container from "components/atoms/container";
-import LeftSide from "components/modules/leftSide";
-import RightSide from "components/modules/rightSide";
+import ContactsSide from "modules/chat/contactsSide";
+import MessagesSide from "modules/chat/messagesSide";
 
 import { NextPage } from "next";
 
 import styles from "./home.module.scss";
-import ContactInfo from "components/modules/contactInfo";
+import ContactInfo from "components/organisms/ContactInfo";
 import { useEffect, useRef } from "react";
 import { useDrawerContext } from "contexts/DrawerContenxt/drawerContext";
+import SplitScreen from "components/template";
 
 const Home: NextPage = () => {
   const drawerContext = useDrawerContext();
@@ -31,15 +32,13 @@ const Home: NextPage = () => {
     };
   }, [handleOutsideClick, drawerContext.hide]);
   return (
-    <div className={styles.main}>
-      <Container className={styles.container}>
-        <LeftSide />
-        <RightSide />
-        <ContactInfo                    
-          drawerRef={drawerRef}
-        />
-      </Container>
-    </div>
+    <Container className={styles.container}>
+      <SplitScreen leftWieght={1} rightLeft={3}>
+        <ContactsSide />
+        <MessagesSide />
+        {/* <ContactInfo drawerRef={drawerRef} /> */}
+      </SplitScreen>
+    </Container>
   );
 };
 

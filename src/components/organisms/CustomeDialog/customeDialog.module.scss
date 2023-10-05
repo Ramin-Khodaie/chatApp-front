@@ -1,0 +1,25 @@
+.main {
+  position: absolute;
+  width: 250px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--color-base-white);
+  top: 55px;
+  left: 70px;
+  z-index: 2;
+  transition: all 0.2s ease;
+
+  ul {
+    list-style: none;
+    li {
+      padding: 8px 14px;
+      font-size: var(--font-size-xl);
+      cursor: pointer;
+      &:hover {
+        background-color: #eee;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+

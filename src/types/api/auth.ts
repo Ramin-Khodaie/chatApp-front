@@ -17,3 +17,6 @@ export interface ILoginParams {
 }
 
 export interface ILoginArgs<T, U> extends IReactQueryHookArgs<T, U>, ILoginParams { }
+
+
+export interface ILogoutArgs<T, U> extends IReactQueryHookArgs<T, U> { }

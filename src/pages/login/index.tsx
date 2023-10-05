@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./signin.module.scss";
-import LoginForm from "components/loginForm";
+import LoginForm from "modules/login";
 import { NextPage } from "next";
 
 const LogInPage: NextPage = () => {
