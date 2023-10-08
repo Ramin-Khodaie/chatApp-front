@@ -19,11 +19,11 @@ export const logIn = ({ email, password }: ILoginParams) => {
     .catch((err) => Promise.reject(err.response.data));
 };
 
-export const getUser = (token: string) => {
+export const getUser = () => {
   return axiosHandler
-    .get(urls.auth.getUser, { params: token })
+    .get(urls.auth.getUser)
     .then((res) => res.data)
-    .catch((err) => Promise.reject(err.response.data));
+    .catch((err) => Promise.reject(err.response?.data));
 };
 
 export const logOut = () => {
