@@ -17,31 +17,31 @@ import { getUser } from "services/auth";
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
-  const checkToken = async () => {
-    const token = Cookies.get("Authorization");
-    if (!token) {
-      router.replace("/login");
-    } else {
-      const response = await getUser();
-      console.log(response);
-      if (response.message === "failed") {
-        Cookies.remove("Authorization");
-        router.replace("/home");
-      } else {
-        if (!response.data) {
-          Cookies.remove("Authorization");
-          router.replace("/home");
-        } else {
-          // TODO: store user in some state
-          router.replace("/home");
-        }
-      }
-    }
-  };
-  console.log("app");
-  useEffect(() => {
-    checkToken();
-  }, []);
+  // const checkToken = async () => {
+  //   const token = Cookies.get("Authorization");
+  //   if (!token) {
+  //     router.replace("/login");
+  //   } else {
+  //     const response = await getUser();
+  //     console.log(response);
+  //     if (response.message === "failed") {
+  //       Cookies.remove("Authorization");
+  //       router.replace("/home");
+  //     } else {
+  //       if (!response.data) {
+  //         Cookies.remove("Authorization");
+  //         router.replace("/home");
+  //       } else {
+  //         // TODO: store user in some state
+  //         router.replace("/home");
+  //       }
+  //     }
+  //   }
+  // };
+  // console.log("app");
+  // useEffect(() => {
+  //   checkToken();
+  // }, []);
 
   const [queryClient] = useState(
     () =>

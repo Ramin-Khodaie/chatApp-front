@@ -11,7 +11,7 @@ import { useLogin } from "hooks/react-query/auth";
 import styles from "./loginForm.module.scss";
 import { UserAuthEnums } from "types/api/auth";
 import { setUserCredentials } from "utils/auth";
-
+import { signIn } from "next-auth/react";
 interface ILoginProps {
   email: string;
   password: string;
@@ -49,7 +49,16 @@ function LogInForm() {
       validationSchema: validateSchema,
       onSubmit: async (value: ILoginProps) => {
         const { email, password } = values;
-        await login({ email, password });
+        try {
+          const result = await signIn("credentials", {
+            redirect: true,
+            callbackUrl: "localhost:3000",
+            email,
+            password,
+          });
+        } catch (error) {
+          console.log({ error });
+        }
       },
     });
 
